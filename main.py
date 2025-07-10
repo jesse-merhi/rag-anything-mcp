@@ -1,6 +1,6 @@
 # rag_anything_server.py  – single shared workspace
 import shutil
-import os, sys, typer, asyncio, json
+import os, typer, asyncio, json
 from pathlib import Path
 from typing import List, Literal, Optional, Dict
 import logging
