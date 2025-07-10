@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "rag-anything": {
+      "command": "/home/jmerh/rag-anything-mcp/.venv/bin/python",
+      "args": ["/home/jmerh/rag-anything-mcp/main.py"],
+      "env": {
+        "OPENAI_API_KEY": "your-actual-openai-api-key"
+      }
+    }
+  }
+}

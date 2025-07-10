@@ -1,0 +1,37 @@
+[project]
+name = "rag-anything-mcp"
+version = "0.1.0"
+description = "MCP server for RAG (Retrieval-Augmented Generation) operations on directories using raganything library"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "graspologic>=3.4.1",
+    "mcp[cli]>=1.10.1",
+    "nano-vectordb>=0.0.4.3",
+    "raganything>=1.2.2",
+    "torch>=2.7.0.dev20250310",
+    "torchaudio>=2.6.0.dev20250310",
+    "torchvision>=0.22.0.dev20250310",
+]
+
+[project.optional-dependencies]
+dev = ["ruff", "pytest"]
+
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu128" },
+]
+torchaudio = [
+    { index = "pytorch-cu128" },
+]
+torchvision = [
+    { index = "pytorch-cu128" },
+]
+
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/nightly/cu128"
+explicit = true
+prerelease = "allow"
